@@ -1,0 +1,112 @@
+<!-- <div *ngFor="let item of todo">
+  <h1>
+    {{ item?.title }}
+  </h1>
+  <div class="level" [ngClass]="{
+    'hard' : item?.level == 'hard',
+    'medium' : item?.level == 'medium',
+    'low' : item?.level == 'low'
+  }">
+    
+  </div>
+</div> -->
+
+<div class="main">
+  <div class="search">
+    <ion-icon name="search-outline"></ion-icon><input type="text" placeholder="Search" />
+  </div>
+
+  <h1>
+    My Task
+  </h1>
+
+  <div class="task">
+    <div class="left">
+      Task List
+    </div>
+    <div class="right">
+      <div class="level low">Low</div>
+      <div class="level medium">Medium</div>
+      <div class="level hard">High</div>
+    </div>
+
+    <div cdkDropListGroup>
+      <div class="cardcon" 
+    cdkDropList
+    #todoList="cdkDropList"
+    [cdkDropListData]="todo"
+    [cdkDropListConnectedTo]="[doneList]"
+    (cdkDropListDropped)="drop($event)"
+    >
+      <div class="card" *ngFor="let item of todo" cdkDrag>
+        <div class="inside">
+          <div class="top">
+            <p class="title"> {{ item?.title }} </p>
+          <p class="sub"> {{ item?.subtitle }} </p>
+          </div>
+          
+          <div class="bottom">
+            <div class="avatar">
+              <img src="../../../assets/avatar/avatar1.jpg" alt="">
+              <img src="../../../assets/avatar/avatar2.jpg" alt="">
+              <img src="../../../assets//avatar/avatar5.jpg" alt="">
+            </div>
+            <div class="level" [ngClass]="{
+              'hard' : item?.level == 'hard',
+              'medium' : item?.level == 'medium',
+              'low' : item?.level == 'low'
+            }" >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card dummy">
+      <ion-icon name="add-outline"></ion-icon>
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="left">
+      Task Done
+    </div>
+  
+
+    <div class="cardcon" 
+    cdkDropList 
+    #doneList="cdkDropList"
+    [cdkDropListData]="donetodo"
+    [cdkDropListConnectedTo]="[todoList]"
+    (cdkDropListDropped)="drop($event)"
+    >
+      <div class="card" *ngFor="let item of donetodo" cdkDrag>
+        <div class="inside">
+          <div class="top">
+            <p class="title"> {{ item?.title }} </p>
+          <p class="sub"> {{ item?.subtitle }} </p>
+          </div>
+          
+          <div class="bottom">
+            <div class="avatar">
+              <img src="../../../assets/avatar/avatar1.jpg" alt="">
+              <img src="../../../assets/avatar/avatar2.jpg" alt="">
+              <img src="../../../assets//avatar/avatar5.jpg" alt="">
+            </div>
+            <div class="level" [ngClass]="{
+              'hard' : item?.level == 'hard',
+              'medium' : item?.level == 'medium',
+              'low' : item?.level == 'low'
+            }" >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    </div>
+    
+
+
+</div>

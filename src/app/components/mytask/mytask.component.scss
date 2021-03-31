@@ -1,0 +1,132 @@
+.level {
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    font-size: 7px;
+    border-radius: 20px;
+    padding: 2px;
+    margin-right: 5px;
+    position: relative;
+    top: -30px;
+    color: white;
+    float: right;
+}
+
+.hard {
+    background-color: red;
+}
+
+.medium {
+    background-color: orange;
+}
+
+.low {
+    background-color: lightblue ;
+}
+
+.search input {
+    width: 51.1%;
+    padding-left: 20px;
+    height: 30px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background: white;
+}
+
+.search ion-icon {
+    position: absolute;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+.main {
+    text-align: justify;
+    padding-left: 5px;
+}
+
+h1 {
+        margin: 15px 0;
+}
+
+.left {
+    margin: 15px 0;
+    font-size: 1rem;
+    color: #FE8C68;
+}
+
+.right {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.card {
+    width: 200px;
+    height: 100px;
+    margin-right: 15px;
+    border-radius: 20px;
+    text-align: justify;
+    background-color: white;
+    cursor: pointer;
+}
+
+.avatar img {
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    margin: 2px;
+}
+
+.avatar {
+    margin: 5px;
+}
+
+
+.cardcon {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: -10px;
+}
+
+.title {
+    margin: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.sub {
+    margin: 10px;
+    font-size: 10px;
+    margin-top: -10px;
+}
+
+.inside {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.top {
+    height: 50px;
+}
+
+.bottom {
+    height: 50px;
+}
+
+.dummy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3px;
+    margin-top: 10px;
+}
+
+.dummy ion-icon {
+    font-size: 20px;
+}

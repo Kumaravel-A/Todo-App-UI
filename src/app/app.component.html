@@ -1,3 +1,25 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div class="left">
+      <div class="header"><ion-icon name="briefcase" style="color: orange;"></ion-icon> <strong> <span style="color: orange;">Right</span><span>work</span> </strong> </div>
+
+      <div class="left-center">
+        <ul>
+          <li class="items" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"> <ion-icon name="home"></ion-icon> Dashboard</li>
+          <li class="items" [routerLink]="['/mytask']" routerLinkActive="active"> <ion-icon name="checkmark-circle-outline"></ion-icon> My Task</li>
+          <li class="items"> <ion-icon name="mail-outline"></ion-icon> Message</li>
+          <li class="items"> <ion-icon name="notifications-outline"></ion-icon> Notification</li>
+          <li class="items"> <ion-icon name="stats-chart"></ion-icon> Statistik</li>
+          <li class="items"> <ion-icon name="folder-open-outline"></ion-icon> My File</li>
+        </ul>
+      </div>
+
+      <div class="exit"><ion-icon name="exit-outline"></ion-icon></div>
+    </div>
+    <div class="right">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</ion-content>
 </ion-app>
